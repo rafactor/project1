@@ -9,6 +9,10 @@ $primary-text-color:   #212121;
 $secondary-text-color: #757575;
 $divider-color:        #BDBDBD;
 
+$color-white: #FFFFFF;
+$color-black: #000;
+$color-grey-dark: #777;
+
 
 *,
 *::after,
@@ -155,16 +159,16 @@ body {
 
 .btn:hover {  
     transform: translateY(-3px);
-    box-shadow: 0 .5rem 1rem rgba($primary-text-color, 0.50); /* shadown in the X, then Y and Blur*/
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.50); /* shadown in the X, then Y and Blur*/
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($primary-text-color, 0.20); /* shadown in the X, then Y and Blur*/
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.20); /* shadown in the X, then Y and Blur*/
 
 }
 .btn--white {
-    background-color: $primary-color-light;
+    background-color: $color-white;
     color:$secondary-text-color;
 }
 
@@ -183,7 +187,7 @@ body {
 }
 
 .btn--white:after{
-    background-color: $primary-color-text;
+    background-color: $color-white;
     
 }
 
