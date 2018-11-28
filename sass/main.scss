@@ -165,7 +165,7 @@ body {
 }
 .btn--white {
     background-color: $primary-color-light;
-    color:$accent-color;
+    color:$secondary-text-color;
 }
 
 .btn:after {
@@ -183,7 +183,7 @@ body {
 }
 
 .btn--white:after{
-    background-color: $primary-text-color;
+    background-color: $primary-color-text;
     
 }
 

@@ -117,7 +117,7 @@ body {
 
 .btn--white {
   background-color: #FFCDD2;
-  color: #607D8B; }
+  color: #757575; }
 
 .btn:after {
   content: '';
@@ -132,7 +132,7 @@ body {
   transition: all .4s; }
 
 .btn--white:after {
-  background-color: #212121; }
+  background-color: #FFFFFF; }
 
 .btn:hover:after {
   transform: scaleX(1.4) scaleY(1.6);
