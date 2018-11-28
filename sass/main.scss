@@ -1,202 +1,23 @@
 
+@import "base/base";  
+@import "base/typography";
+@import "base/utilities";
+@import "base/animations";
 
-$primary-color-dark:   #D32F2F;
-$primary-color:        #F44336;
-$primary-color-light:  #FFCDD2;
-$primary-color-text:   #FFFFFF;
-$accent-color:         #607D8B;
-$primary-text-color:   #212121;
-$secondary-text-color: #757575;
-$divider-color:        #BDBDBD;
+@import "abstracts/variable";
+@import "abstracts/mixins";
+@import "abstracts/functions";
 
-$color-white: #FFFFFF;
-$color-black: #000;
-$color-grey-dark: #777;
+@import "pages/home";
 
+@import "components/button";
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding:0;
-    box-sizing: inherit
-}
-
-html {
-    font-size: 62.5%;
-
-}
-body {
-    font-family: "Lato", sans-serif;
-    box-sizing: border-box;
-    line-height: 1.7;
-    color: $accent-color;
-    padding: 3rem;
-}
-
-.header{
-    background-image: linear-gradient(
-        to  bottom, 
-        rgba($primary-color, 0.3), 
-        rgba($primary-text-color, 0.4)) 
-        ,url(../images/toronto_bg_sm.jpg);
-
-    height: 95vh;
-    position: relative;
-    background-size: cover;
-    background-position: bottom;
-    -webkit-clip-path: polygon(0 0, 100% 1%, 100% 81%, 0% 100%);
-    clip-path: polygon(0 0, 100% 1%, 100% 81%, 0% 100%);
-}
-
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-    height: 3.5rem;
-}
-
-.header__text-box{
-    /* Center the box in the middle */
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* move the object back in 50% of its measure, placing it on center */
-    text-align: center;
-
-
-}
-
-.heading-primary {
-    color: $primary-color-text;
-    text-transform: uppercase;
-
-    backface-visibility: hidden;
-}
-.heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 1rem;
-    
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* animation-delay: 1s;  */
-    /* animation-iteration-count:3; */ 
-}
-
-.heading-primary--sub {
-    display: block;
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: .5rem;
-
-    animation: moveInRight 1s ease-out;
-    margin-bottom: 3rem;
-}
+@import "layout/header"
 
 
 
-@keyframes moveInLeft {
-    0% {
-        opacity: 0%;
-        transform: translateX(-10rem) ;
-    }
 
-    80% {
-        transform: translateX(1rem);
-    }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
 
-@keyframes moveInRight {
-    0% {
-        opacity: 0%;
-        transform: translateX(10rem);
-    }
 
-    80% {
-        transform: translateX(-1rem);
-    }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s; /* define the time for transformation when hover and action */
-    position: relative;
-    font-size: 1.6rem;
-}
-
-.btn:hover {  
-    transform: translateY(-3px);
-    box-shadow: 0 .5rem 1rem rgba($color-black, 0.50); /* shadown in the X, then Y and Blur*/
-}
-
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-black, 0.20); /* shadown in the X, then Y and Blur*/
-
-}
-.btn--white {
-    background-color: $color-white;
-    color:$secondary-text-color;
-}
-
-.btn:after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: -1;
-    transition: all .4s
-
-}
-
-.btn--white:after{
-    background-color: $color-white;
-    
-}
-
-.btn:hover:after{
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn--animated { 
-    animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards; /* apply stile of 0% before it starts */
-}
