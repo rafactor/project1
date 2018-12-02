@@ -35,3 +35,40 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block; // so that the effect has only the width of the text
+
+    //gradient text effect
+    background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+    -webkit-background-clip: text; //clip the effect only on the text is
+    color: transparent; //remove the text color so that the background clipper color above appear
+    // end
+    
+    letter-spacing: .2rem; 
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(2deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem //X direction, Y direction and blur
+
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

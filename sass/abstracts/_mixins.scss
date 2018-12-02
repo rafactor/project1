@@ -1,0 +1,7 @@
+@mixin clearfix {
+    &::after {
+        content: ""; //to do not see the element in the page
+        display: table;
+        clear: both;
+    }
+}
