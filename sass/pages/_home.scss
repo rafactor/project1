@@ -11,7 +11,7 @@
         rgba($primary-text-color, 0.4)), 
         url(../images/toronto_bg_sm.jpg);
     background-size: cover;
-    padding: 20rem;
+    padding: 20rem 0;
 
     transform: skewY(-7deg);
     margin-top: -10rem;
@@ -20,4 +20,9 @@
     & > * {
         transform: skewY(7deg);
     }
+}
+
+.section-tours {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
 }
